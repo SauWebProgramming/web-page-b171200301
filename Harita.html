@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="assets\css/bootstrap.css">
+        <link rel="stylesheet" href="assets\css/bootstrap-grid.css">
+        <link rel="stylesheet" href="assets\animate.css">
+        <link rel="stylesheet" href="assets/css/wowanimate.css">
+        <title>Cevdet</title>
+		
+			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+				<script type="text/javascript">
+					$(function () {
+						$("#top").click(function () {
+							// Sayfamızı kaydıracak olan kod burasıdır.
+							$("html,body").stop().animate({ scrollTop: "0" }, 1000);
+						});
+					});
+					$(window).scroll(function () {
+						var uzunluk = $(document).scrollTop();
+						if (uzunluk > 300) $("#top").fadeIn(500);
+						else { $("#top").fadeOut(500); }
+					});
+				</script>
+				<style type="text/css">
+					#top {
+						bottom: 5px;
+						bottom: 20px;
+						display: none;
+						height: 100px;
+						position: fixed;
+						right: 20px;
+					}
+				</style>
+		
+    </head>
+    
+    <body>
+         
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3e284f; max-height: 90px" >
+            
+    
+             <nav class="navbar navbar-expand-lg navbar-dark" style="margin-left: 470px">
+                <a class="navbar-brand" style="font-style: italic; font-size: 20px" href="index.html"><strong>Hakkında</strong></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="sehrimiz.html"><strong><span style="color: white; font-size: 20px">Sivas</span></strong></a>
+						<a class="nav-item nav-link active" href="Harita.html"><strong><span style="color: #7a6986; font-size: 20px">Harita</span></strong></a>
+                    </div>
+                </div>
+            </nav>
+
+          
+       </nav>
+        
+		
+		
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+
+			<script>
+			function myMap() {
+			var mapProp= {
+			  center:new google.maps.LatLng(51.508742,-0.120850),
+			  zoom:5,
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+			</script>
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+		
+
+       
+        <footer style="background-color: black; margin-top: 50px">
+            <div style="color: white; text-align: center">
+                <p>Posted by: Cevdet Bel</p>
+                <p>Contact information: <a href="mailto:someone@example.com">Cevdet Bel@example.com</a></p>
+            </div>
+        </footer>
+        
+        
+
+      
+        
+        
+    </body>
+</html>
